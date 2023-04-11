@@ -39,15 +39,10 @@ public class ShapeFactory
                 break;
             }
             case 7: {
-                final GeneralPath path = new GeneralPath();
-                final double tmp_height = Math.sqrt(2.0) / 2.0 * this.height;
-                path.moveTo(-this.width / 2, -tmp_height);
-                path.lineTo(0.0, -tmp_height);
-                path.lineTo(this.width / 2, tmp_height);
-                path.closePath();
-                this.shape = path;
+                this.shape = createStar(5, new Point(0, 0), this.width / 2.0, this.width / 4.0);
                 break;
             }
+            
             case 9: {
                 this.shape = new Arc2D.Double(-this.width / 2.0, -this.height / 2.0, this.width, this.height, 30.0, 300.0, 2);
                 break;
@@ -68,11 +63,11 @@ public class ShapeFactory
                 this.stroke = new BasicStroke(7.0f);
                 break;
             }
-            case 7: {
+            case 8: {
                 this.paint = new GradientPaint((float)(-this.width), (float)(-this.height), Color.white, (float)this.width, (float)this.height, Color.gray, true);
                 break;
             }
-            case 8: {
+            case 7: {
                 this.paint = Color.red;
                 break;
             }
