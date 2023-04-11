@@ -13,7 +13,8 @@ import java.awt.Shape;
 // Decompiled by Procyon v0.5.36
 // 
 
-public class ShapeFactory
+
+public class ShapeFactory 
 {
     public Shape shape;
     public BasicStroke stroke;
@@ -21,7 +22,8 @@ public class ShapeFactory
     public int width;
     public int height;
     
-    public ShapeFactory(final int shape_type) {
+    // конструктор класу ShapeFactory, який створює фігуру заданого типу
+    public ShapeFactory(final int shape_type) {  
         this.width = 25;
         this.height = 25;
         this.stroke = new BasicStroke(3.0f);
@@ -77,7 +79,8 @@ public class ShapeFactory
         }
     }
     
-    private static Shape createStar(final int arms, final Point center, final double rOuter, final double rInner) {
+    // внутрішній метод класу, який створює зірку з заданою кількістю ребер та радіусами зовнішнього та внутрішнього кола
+    private static Shape createStar(final int arms, final Point center, final double rOuter, final double rInner) { 
         final double angle = 3.141592653589793 / arms;
         final GeneralPath path = new GeneralPath();
         for (int i = 0; i < 2 * arms; ++i) {

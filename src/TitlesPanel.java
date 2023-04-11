@@ -22,6 +22,9 @@ public class TitlesPanel extends JPanel implements ActionListener
     private int start_angle;
     private int shape;
     
+
+    // Створює новий екземпляр класу TitlesPanel з вказаною формою 
+    // @param _shape форма, що буде відображатись на панелі
     public TitlesPanel(final int _shape) {
         this.start_angle = 0;
         this.is_done = true;
@@ -37,6 +40,10 @@ public class TitlesPanel extends JPanel implements ActionListener
         }
     }
     
+
+    // малює геометричні фігури на панелі з використанням графічного контексту g
+    // @param g графічний контекст для малювання на панелі
+
     private void doDrawing(final Graphics g) {
         this.is_done = false;
         (this.g2d = (Graphics2D)g).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
